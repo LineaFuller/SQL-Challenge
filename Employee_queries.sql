@@ -41,11 +41,11 @@
 
 -- Data Analysis Queries 
 -- 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
--- select s.emp_no, e.last_name, e.first_name, e.sex, s.salary
--- from employees as e
--- inner join salaries as s
--- on s.emp_no = e.emp_no
--- order by s.emp_no;
+SELECT employees.emp_no, employees.first_name, employees.last_name, employees.sex, salaries.salary
+FROM employees 
+JOIN salaries
+ON salaries.emp_no = employees.emp_no;
+
 
 -- 2. List first name, last name, and hire date for employees who were hired in 1986.
 -- Isolate years hired from employees table 
